@@ -4,7 +4,7 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
-    databaseUrl: "postgres://postgres:dd8d48a262b6e9cc@srv-captain--medusa-server:5432/postgres",
+    databaseUrl: process.env.DATABASE_URL,
     databaseDriverOptions: {
       connection: {
         ssl: {
